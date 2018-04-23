@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>::hnginternship4 Stage 1</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<h1>Farm Depot</h1>
+			</div>
+			<div class="search-container">
+				<form action="/action_page.php">
+				  <input type="text" placeholder="Search.." name="search">
+				  <button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			
+		</div>
+		<section>
+		<div class="intro"><h3>HNGINTERSHIP </h3><h2>4</h2></div>
+		<div class="time">
+			<?php
+
+			$result = mysql_query("SELECT `datetime` FROM `table`");
+			$row = mysql_fetch_row($result);
+			$date = date_create($row[0]);
+
+			echo date_format($date, 'g:ia \o\n l jS F Y');
+			#output: 5:45pm on Saturday 24th March 2012
+
+			?>
+		</div>
+			
+	</section>
+	<footer>
+		
+	</footer>
+		
+	</div>
+	
+
+</body>
+</html>
